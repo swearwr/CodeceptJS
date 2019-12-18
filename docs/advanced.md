@@ -52,7 +52,7 @@ S Test Login | {"login":"admin","password":"23456"}
 
 ```js
 // You can filter your data table
-Data(accounts.filter(account => account.login == 'admin')
+Data(accounts.filter(account => account.login == 'admin'))
 .Scenario('Test Login', (I, current) => {
   I.fillField('Username', current.login);
   I.fillField('Password', current.password);
@@ -98,7 +98,7 @@ Scenario('update user profile', () => {
 All tests with `@tag` could be executed with `--grep @tag` option.
 
 ```sh
-codeceptjs run --grep @slow
+codeceptjs run --grep '@slow'
 ```
 
 Use regex for more flexible filtering:
